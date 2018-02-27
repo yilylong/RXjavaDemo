@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhl.rx.activity.CustomViewGroupActivity">
+
+    <com.zhl.rx.views.FloatViewGroup
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:background="#25b6c0c5">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="260dp"
+            android:background="#7a6ad5"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="测试1"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="260dp"
+            android:background="#734b7e"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="测试2"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#806753"
+            android:gravity="center"
+            android:text="测试3"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="220dp"
+            android:layout_height="200dp"
+            android:background="#457562"
+            android:text="测试4"
+            android:layout_marginTop="5dp"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="180dp"
+            android:background="#c25aa6"
+            android:layout_marginLeft="10dp"
+            android:text="测试5"
+            android:textColor="#ffffff" />
+
+
+    </com.zhl.rx.views.FloatViewGroup>
+
+
+</android.support.constraint.ConstraintLayout>

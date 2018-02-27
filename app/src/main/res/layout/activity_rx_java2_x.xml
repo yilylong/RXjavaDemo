@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zhl.rx.activity.RxJava2XActivity">
+
+
+    <Button
+        android:id="@+id/doA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Observer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/doB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Consumer"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doA" />
+
+    <Button
+        android:id="@+id/doC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flowable"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doB" />
+
+    <Button
+        android:id="@+id/doD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flowable_just"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doC" />
+
+    <Button
+        android:id="@+id/doE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flowable_fromIterable"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doD" />
+
+    <Button
+        android:id="@+id/doF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Observable.create"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doE" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="RxJava2.x"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
