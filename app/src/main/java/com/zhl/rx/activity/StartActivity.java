@@ -72,7 +72,7 @@ public class StartActivity extends AppCompatActivity {
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create()).build();
         LottieHttpService lottieService = retrofit.create(LottieHttpService.class);
-        lottieService.getLottieJsonByUrl("911")
+        lottieService.getLottieJsonByUrl("433")
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Consumer<ResponseBody>() {
@@ -84,6 +84,7 @@ public class StartActivity extends AppCompatActivity {
                                     @Override
                                     public void onCompositionLoaded(@Nullable LottieComposition composition) {
                                         animationView.setComposition(composition);
+                                        animationView.loop(false);
                                         animationView.playAnimation();
                                     }
                                 });
