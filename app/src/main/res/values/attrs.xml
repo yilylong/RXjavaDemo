@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TagImageAttr">
+
+        <attr name="tagBackgroud" format="color|reference"></attr>
+        <attr name="tagTextColor" format="color|reference"></attr>
+        <attr name="tagSize" format="integer|reference"></attr>
+        <attr name="showTag" format="boolean"></attr>
+        <attr name="tagLocation">
+            <enum name="ON_TOP_lEFT" value="0" />
+            <enum name="ON_TOP_RIGHT" value="1" />
+        </attr>
+
+    </declare-styleable>
+</resources>

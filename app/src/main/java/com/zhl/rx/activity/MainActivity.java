@@ -103,6 +103,34 @@ public class MainActivity extends AppCompatActivity {
                 doI();
             }
         });
+        Button doJ = (Button) findViewById(R.id.doJ);
+        doJ.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                doJ();
+            }
+        });
+        Button doK = (Button) findViewById(R.id.doK);
+        doK.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                doK();
+            }
+        });
+        Button doL = (Button) findViewById(R.id.doL);
+        doL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                doL();
+            }
+        });
+        Button doM = (Button) findViewById(R.id.doM);
+        doM.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                doM();
+            }
+        });
     }
 
 
@@ -273,6 +301,22 @@ public class MainActivity extends AppCompatActivity {
     }
     private void doI() {
         Intent intent = new Intent(this,CustomViewGroupActivity.class);
+        startActivity(intent);
+    }
+    private void doJ() {
+        Intent intent = new Intent(this,KotlinTest.class);
+        startActivity(intent);
+    }
+    private void doK() {
+        Intent intent = new Intent(this,CaptureImageActivity.class);
+        startActivity(intent);
+    }
+    private void doL() {
+        Intent intent = new Intent(this,Lock_test.class);
+        startActivity(intent);
+    }
+    private void doM() {
+        Intent intent = new Intent(this,CustomViewTestActivity.class);
         startActivity(intent);
     }
 
