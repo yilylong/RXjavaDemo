@@ -131,8 +131,14 @@ public class MainActivity extends AppCompatActivity {
                 doM();
             }
         });
+        Button doN = (Button) findViewById(R.id.doN);
+        doN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                doN();
+            }
+        });
     }
-
 
 
 
@@ -319,7 +325,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this,CustomViewTestActivity.class);
         startActivity(intent);
     }
-
+    private void doN() {
+        Intent intent = new Intent(this,Dagger2Activity.class);
+        startActivity(intent);
+    }
     private Bitmap getBitmapFromAssets(String name) {
         Bitmap bitmap = null;
         try {

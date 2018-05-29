@@ -42,7 +42,8 @@
         </provider>
 
         <activity android:name=".activity.Lock_test" />
-        <activity android:name=".activity.CustomViewTestActivity"></activity>
+        <activity android:name=".activity.CustomViewTestActivity" />
+        <activity android:name=".activity.Dagger2Activity"></activity>
     </application>
 
 </manifest>
