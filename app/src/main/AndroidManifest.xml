@@ -43,7 +43,8 @@
 
         <activity android:name=".activity.Lock_test" />
         <activity android:name=".activity.CustomViewTestActivity" />
-        <activity android:name=".activity.Dagger2Activity"></activity>
+        <activity android:name=".activity.Dagger2Activity" />
+        <activity android:name=".activity.CaptureViewActivity"></activity>
     </application>
 
 </manifest>

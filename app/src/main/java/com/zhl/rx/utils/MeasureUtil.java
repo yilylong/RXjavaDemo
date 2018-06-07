@@ -229,6 +229,13 @@ public final class MeasureUtil {
         return destBitmap;
     }
 
+    /**
+     *  将Bitmap保存为本地图片
+     * @param mBitmap
+     * @param savePath 保存的路径
+     * @param saveFileName 保存的文件名
+     * @return
+     */
     public static boolean saveBitmap2jpg(Bitmap mBitmap, String savePath, String saveFileName) {
         // TODO Auto-generated method stub
         if (null == mBitmap || TextUtils.isEmpty(savePath) || TextUtils.isEmpty(saveFileName))
