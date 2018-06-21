@@ -27,6 +27,7 @@
             android:layout_height="260dp"
             android:background="#734b7e"
             android:gravity="center"
+            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:text="测试2"
             android:textColor="#ffffff" />

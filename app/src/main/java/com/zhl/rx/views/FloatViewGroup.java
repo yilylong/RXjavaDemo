@@ -35,50 +35,52 @@ public class FloatViewGroup extends ViewGroup {
         int usedHeight = 0;
         for(int i=0;i<getChildCount();i++){
             View childView = getChildAt(i);
-            LayoutParams params = (LayoutParams) childView.getLayoutParams();
-            int childWidthSpec = MeasureSpec.AT_MOST;
-            int childHeightSpec = MeasureSpec.AT_MOST;
-            switch (params.width){
-                case LayoutParams.MATCH_PARENT:
-                    if(widthMode==MeasureSpec.EXACTLY||widthMode==MeasureSpec.AT_MOST){
-                        childWidthSpec = MeasureSpec.makeMeasureSpec(widthSize,MeasureSpec.EXACTLY);
-                    }else{
-                        childWidthSpec = MeasureSpec.makeMeasureSpec(0,MeasureSpec.UNSPECIFIED);
-                    }
-                    break;
-                case LayoutParams.WRAP_CONTENT:
-                    if(widthMode==MeasureSpec.EXACTLY||widthMode==MeasureSpec.AT_MOST){
-                        childWidthSpec = MeasureSpec.makeMeasureSpec(widthSize,MeasureSpec.AT_MOST);
-                    }else{
-                        childWidthSpec = MeasureSpec.makeMeasureSpec(0,MeasureSpec.UNSPECIFIED);
-                    }
-                    break;
-                default:
-                    childWidthSpec = MeasureSpec.makeMeasureSpec(params.width,MeasureSpec.EXACTLY);
-                    break;
+            if(childView.getVisibility()!=View.GONE){
+                LayoutParams params = (LayoutParams) childView.getLayoutParams();
+                int childWidthSpec = MeasureSpec.AT_MOST;
+                int childHeightSpec = MeasureSpec.AT_MOST;
+                switch (params.width){
+                    case LayoutParams.MATCH_PARENT:
+                        if(widthMode==MeasureSpec.EXACTLY||widthMode==MeasureSpec.AT_MOST){
+                            childWidthSpec = MeasureSpec.makeMeasureSpec(widthSize,MeasureSpec.EXACTLY);
+                        }else{
+                            childWidthSpec = MeasureSpec.makeMeasureSpec(0,MeasureSpec.UNSPECIFIED);
+                        }
+                        break;
+                    case LayoutParams.WRAP_CONTENT:
+                        if(widthMode==MeasureSpec.EXACTLY||widthMode==MeasureSpec.AT_MOST){
+                            childWidthSpec = MeasureSpec.makeMeasureSpec(widthSize,MeasureSpec.AT_MOST);
+                        }else{
+                            childWidthSpec = MeasureSpec.makeMeasureSpec(0,MeasureSpec.UNSPECIFIED);
+                        }
+                        break;
+                    default:
+                        childWidthSpec = MeasureSpec.makeMeasureSpec(params.width,MeasureSpec.EXACTLY);
+                        break;
+                }
+                usedWidth+=MeasureSpec.getSize(childWidthSpec)+params.leftMargin+params.rightMargin;
+                switch (params.height){
+                    case LayoutParams.MATCH_PARENT:
+                        if(heightMode==MeasureSpec.EXACTLY||heightMode==MeasureSpec.AT_MOST){
+                            childHeightSpec = MeasureSpec.makeMeasureSpec(heightSize,MeasureSpec.EXACTLY);
+                        }else{
+                            childHeightSpec = MeasureSpec.makeMeasureSpec(0,MeasureSpec.UNSPECIFIED);
+                        }
+                        break;
+                    case LayoutParams.WRAP_CONTENT:
+                        if(heightMode==MeasureSpec.EXACTLY||heightMode==MeasureSpec.AT_MOST){
+                            childHeightSpec = MeasureSpec.makeMeasureSpec(heightSize,MeasureSpec.AT_MOST);
+                        }else{
+                            childHeightSpec = MeasureSpec.makeMeasureSpec(0,MeasureSpec.UNSPECIFIED);
+                        }
+                        break;
+                    default:
+                        childHeightSpec = MeasureSpec.makeMeasureSpec(params.height,MeasureSpec.EXACTLY);
+                        break;
+                }
+                usedHeight+=MeasureSpec.getSize(childHeightSpec)+params.bottomMargin+params.topMargin;
+                measureChild(childView,childWidthSpec,childHeightSpec);
             }
-            usedWidth+=MeasureSpec.getSize(childWidthSpec)+params.leftMargin+params.rightMargin;
-            switch (params.height){
-                case LayoutParams.MATCH_PARENT:
-                    if(heightMode==MeasureSpec.EXACTLY||heightMode==MeasureSpec.AT_MOST){
-                        childHeightSpec = MeasureSpec.makeMeasureSpec(heightSize,MeasureSpec.EXACTLY);
-                    }else{
-                        childHeightSpec = MeasureSpec.makeMeasureSpec(0,MeasureSpec.UNSPECIFIED);
-                    }
-                    break;
-                case LayoutParams.WRAP_CONTENT:
-                    if(heightMode==MeasureSpec.EXACTLY||heightMode==MeasureSpec.AT_MOST){
-                        childHeightSpec = MeasureSpec.makeMeasureSpec(heightSize,MeasureSpec.AT_MOST);
-                    }else{
-                        childHeightSpec = MeasureSpec.makeMeasureSpec(0,MeasureSpec.UNSPECIFIED);
-                    }
-                    break;
-                default:
-                    childHeightSpec = MeasureSpec.makeMeasureSpec(params.height,MeasureSpec.EXACTLY);
-                    break;
-            }
-            usedHeight+=MeasureSpec.getSize(childHeightSpec)+params.bottomMargin+params.topMargin;
-            measureChild(childView,childWidthSpec,childHeightSpec);
         }
         if(widthMode==MeasureSpec.UNSPECIFIED){
             widthSize = usedWidth;

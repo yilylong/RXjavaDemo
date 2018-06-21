@@ -9,6 +9,7 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <TextView
             android:id="@+id/toast"
             android:layout_width="wrap_content"
@@ -168,6 +169,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/doK" />
+
         <Button
             android:id="@+id/doM"
             android:layout_width="wrap_content"
@@ -180,6 +182,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/doL" />
+
         <Button
             android:id="@+id/doN"
             android:layout_width="wrap_content"
@@ -192,6 +195,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/doM" />
+
         <Button
             android:id="@+id/doO"
             android:layout_width="wrap_content"
@@ -204,6 +208,19 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/doN" />
+
+        <Button
+            android:id="@+id/doP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="-6dp"
+            android:text="FloatImageView"
+            android:textAllCaps="false"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/doO" />
 
         <ImageView
             android:id="@+id/imageResult"

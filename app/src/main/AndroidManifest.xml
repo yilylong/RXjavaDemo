@@ -44,7 +44,8 @@
         <activity android:name=".activity.Lock_test" />
         <activity android:name=".activity.CustomViewTestActivity" />
         <activity android:name=".activity.Dagger2Activity" />
-        <activity android:name=".activity.CaptureViewActivity"></activity>
+        <activity android:name=".activity.CaptureViewActivity" />
+        <activity android:name=".activity.FloatImageViewTest"></activity>
     </application>
 
 </manifest>
