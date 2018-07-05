@@ -13,8 +13,8 @@ import android.widget.Toast;
 
 import com.zhl.rx.R;
 import com.zhl.rx.bean.Car;
-import com.zhl.rx.bean.Person;
 import com.zhl.rx.bean.Gender;
+import com.zhl.rx.bean.Person;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -152,8 +152,19 @@ public class MainActivity extends AppCompatActivity {
                 doP();
             }
         });
+        Button doR = (Button) findViewById(R.id.doR);
+        doR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                doR();
+            }
+        });
     }
 
+    private void doR() {
+        Intent intent = new Intent(this,CoordinatorLayoutTest.class);
+        startActivity(intent);
+    }
 
 
     private void doA(){
