@@ -3,6 +3,8 @@ package com.zhl.rx.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.text.emoji.EmojiCompat;
+import android.support.text.emoji.bundled.BundledEmojiCompatConfig;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -58,6 +60,7 @@ public class StartActivity extends AppCompatActivity {
                 doC();
             }
         });
+        EmojiCompat.init(new BundledEmojiCompatConfig(this));
     }
 
 

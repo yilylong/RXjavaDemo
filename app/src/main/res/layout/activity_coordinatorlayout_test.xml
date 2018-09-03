@@ -15,11 +15,20 @@
         android:layout_height="match_parent"
         app:layout_behavior="com.zhl.rx.widget.NestedBehavior">
 
-        <com.zhl.rx.views.BehaviorWebView
+        <WebView
             android:id="@+id/webview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            />
     </android.support.v4.widget.NestedScrollView>
+
+    <!--<com.zhl.rx.views.NestedScrollWebView-->
+    <!--android:id="@+id/webview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:focusable="true"-->
+    <!--android:focusableInTouchMode="true"-->
+    <!--app:layout_behavior="com.zhl.rx.widget.WebViewBehavior" />-->
 
     <LinearLayout
         android:id="@+id/top_bar"

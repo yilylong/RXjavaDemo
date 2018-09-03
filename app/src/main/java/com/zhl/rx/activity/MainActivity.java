@@ -159,6 +159,14 @@ public class MainActivity extends AppCompatActivity {
                 doR();
             }
         });
+        Button doS = (Button) findViewById(R.id.doS);
+        doS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,EmojiTestActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void doR() {

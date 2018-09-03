@@ -48,7 +48,8 @@ dependencies {
     compile 'com.google.dagger:dagger-android:2.16'
     compile 'com.google.dagger:dagger-android-support:2.16' // if you use the support libraries
     annotationProcessor 'com.google.dagger:dagger-android-processor:2.16'
-
+    compile 'com.github.rhlff:NestedScrollWebView:v1.0.2'
+    compile "com.android.support:support-emoji-bundled:27.0.2"
 
 }
 repositories {

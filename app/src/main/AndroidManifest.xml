@@ -46,10 +46,13 @@
         <activity android:name=".activity.Dagger2Activity" />
         <activity android:name=".activity.CaptureViewActivity" />
         <activity android:name=".activity.FloatImageViewTest" />
-        <activity android:name=".activity.CoordinatorLayoutTest"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            />
-        <!--<activity android:name=".activity.ShaderTextActivity"></activity>-->
+        <activity
+            android:name=".activity.CoordinatorLayoutTest"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <!-- <activity android:name=".activity.ShaderTextActivity"></activity> -->
+        <activity android:name=".activity.EmojiTestActivity"
+            android:windowSoftInputMode="adjustPan|adjustResize|stateAlwaysHidden"
+            ></activity>
     </application>
 
 </manifest>
