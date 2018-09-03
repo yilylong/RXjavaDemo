@@ -51,7 +51,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <!-- <activity android:name=".activity.ShaderTextActivity"></activity> -->
         <activity android:name=".activity.EmojiTestActivity"
-            android:windowSoftInputMode="adjustPan|adjustResize|stateAlwaysHidden"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
             ></activity>
     </application>
 
