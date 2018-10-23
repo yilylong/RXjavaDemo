@@ -19,7 +19,8 @@
                 android:id="@+id/img"
                 android:layout_width="300dp"
                 android:layout_height="200dp"
-                android:src="@mipmap/img_2" />
+                android:src="@mipmap/img_2"
+                android:transitionName="userhead" />
 
             <Button
                 android:id="@+id/btn"
@@ -31,7 +32,8 @@
                 android:id="@+id/tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ajlsdjadklj撒娇佛国家艾薇A水调歌头" />
+                android:text="ajlsdjadklj撒娇佛国家艾薇A水调歌头"
+                android:transitionName="desc" />
 
         </LinearLayout>
 
@@ -39,8 +41,7 @@
             android:id="@+id/floatView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/socker"
-            />
+            android:src="@mipmap/socker" />
     </FrameLayout>
 
 </android.support.constraint.ConstraintLayout>
