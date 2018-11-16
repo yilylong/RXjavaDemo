@@ -51,9 +51,10 @@
             android:name=".activity.CoordinatorLayoutTest"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <!-- <activity android:name=".activity.ShaderTextActivity"></activity> -->
-        <activity android:name=".activity.EmojiTestActivity"
-            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"
-            ></activity>
+        <activity
+            android:name=".activity.EmojiTestActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
+        <activity android:name=".activity.QRcodeImageShareActivity"></activity>
     </application>
 
 </manifest>

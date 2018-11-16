@@ -50,6 +50,7 @@ dependencies {
     annotationProcessor 'com.google.dagger:dagger-android-processor:2.16'
     compile 'com.github.rhlff:NestedScrollWebView:v1.0.2'
     compile "com.android.support:support-emoji-bundled:27.0.2"
+    compile 'com.github.yilylong:CBDialog:v1.0.7'
 
 }
 repositories {
