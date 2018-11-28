@@ -54,7 +54,8 @@
         <activity
             android:name=".activity.EmojiTestActivity"
             android:windowSoftInputMode="adjustResize|stateAlwaysHidden" />
-        <activity android:name=".activity.QRcodeImageShareActivity"></activity>
+        <activity android:name=".activity.QRcodeImageShareActivity" />
+        <activity android:name=".activity.CustomProgressBarActivity"></activity>
     </application>
 
 </manifest>

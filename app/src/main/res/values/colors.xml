@@ -6,4 +6,5 @@
     <color name="nomalColor">#666666</color>
     <color name="rightColor">#33FF66</color>
     <color name="wrongColor">#FF3333</color>
+    <color name="progress_cover_color">#55c8c6c6</color>
 </resources>

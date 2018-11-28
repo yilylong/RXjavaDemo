@@ -175,6 +175,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button doU = (Button) findViewById(R.id.doU);
+        doU.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,CustomProgressBarActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void doR() {

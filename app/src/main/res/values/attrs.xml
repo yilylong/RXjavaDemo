@@ -12,4 +12,14 @@
         </attr>
 
     </declare-styleable>
+    <declare-styleable name="ImageProgressBar">
+
+        <attr name="imagebg" format="reference|integer"></attr>
+        <attr name="roundConer" format="reference|integer|dimension"></attr>
+        <attr name="coverColor" format="reference|color|integer"></attr>
+        <attr name="styleMode" format="enum">
+            <enum name="mode_image_show" value="0" />
+            <enum name="mode_image_hidden" value="1" />
+        </attr>
+    </declare-styleable>
 </resources>
