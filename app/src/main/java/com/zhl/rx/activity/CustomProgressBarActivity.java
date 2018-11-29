@@ -12,12 +12,13 @@ public class CustomProgressBarActivity extends AppCompatActivity {
     private static final int UPDATE_PROGRESS=0;
     boolean stop;
     int progress = 0;
-    ImageProgressBar progressBar;
+    ImageProgressBar progressBar,progressBar2;
     Handler handler = new Handler(){
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case UPDATE_PROGRESS:
                     progressBar.setProgress(msg.arg1);
+                    progressBar2.setProgress(msg.arg1);
                     break;
                 default:
                     break;
@@ -29,6 +30,7 @@ public class CustomProgressBarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_progress_bar);
         progressBar = findViewById(R.id.progressBar);
+        progressBar2 = findViewById(R.id.progressBar2);
 //        progressBar.setProgress(20);
 //        progressBar.postDelayed(new Runnable() {
 //            @Override
