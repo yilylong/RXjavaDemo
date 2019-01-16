@@ -2,7 +2,6 @@ package com.zhl.rx.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.text.emoji.EmojiCompat;
 import android.support.text.emoji.bundled.BundledEmojiCompatConfig;
 import android.support.v7.app.AppCompatActivity;
@@ -11,15 +10,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
-import com.airbnb.lottie.LottieComposition;
-import com.airbnb.lottie.OnCompositionLoadedListener;
 import com.zhl.rx.R;
 import com.zhl.rx.http.LottieHttpService;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
@@ -82,20 +74,20 @@ public class StartActivity extends AppCompatActivity {
                     @Override
                     public void accept(ResponseBody response)  {
                         if (response != null) {
-                            try {
-                                LottieComposition.Factory.fromJson(getResources(), new JSONObject(response.string()), new OnCompositionLoadedListener() {
-                                    @Override
-                                    public void onCompositionLoaded(@Nullable LottieComposition composition) {
-                                        animationView.setComposition(composition);
-                                        animationView.loop(false);
-                                        animationView.playAnimation();
-                                    }
-                                });
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
+//                            try {
+////                                LottieComposition.Factory.fromJson(getResources(), new JSONObject(response.string()), new OnCompositionLoadedListener() {
+////                                    @Override
+////                                    public void onCompositionLoaded(@Nullable LottieComposition composition) {
+////                                        animationView.setComposition(composition);
+////                                        animationView.loop(false);
+////                                        animationView.playAnimation();
+////                                    }
+////                                });
+//                            } catch (JSONException e) {
+//                                e.printStackTrace();
+//                            } catch (IOException e) {
+//                                e.printStackTrace();
+//                            }
                         } else {
                             Toast.makeText(StartActivity.this, "获取Lottie Json失败", Toast.LENGTH_SHORT).show();
                         }

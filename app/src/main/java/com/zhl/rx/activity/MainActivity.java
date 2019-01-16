@@ -12,9 +12,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.zhl.rx.R;
+import com.zhl.rx.bean.Baozi;
 import com.zhl.rx.bean.Car;
+import com.zhl.rx.bean.EventMessage1;
+import com.zhl.rx.bean.EventMessage2;
 import com.zhl.rx.bean.Gender;
 import com.zhl.rx.bean.Person;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -183,6 +190,37 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button doV = (Button) findViewById(R.id.doV);
+        doV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,EventBusTest.class);
+                startActivity(intent);
+            }
+        });
+        Button doW = (Button) findViewById(R.id.doW);
+        doW.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,CustomRefreshHeaderActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        EventBus.getDefault().register(this);
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onHandleEventMessage1(EventMessage1 message){
+        Toast.makeText(this,message.getMessage(),0).show();
+    }
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onHandleEventMessage2(EventMessage2 message){
+        Toast.makeText(this,"收到消息代码："+message.getCode()+"-"+message.getMessage(),0).show();
+    }
+    @Subscribe()
+    public void onHandleBaoziMessage(Baozi baozi){
+        Toast.makeText(this,"收到EventBus消息代码"+baozi.toString(),0).show();
     }
 
     private void doR() {
@@ -405,6 +443,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        if(EventBus.getDefault().isRegistered(this)){
+            EventBus.getDefault().unregister(this);
+        }
         if(subscriber!=null){
             subscriber.unsubscribe();
         }
