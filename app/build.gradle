@@ -55,6 +55,7 @@ dependencies {
     compile 'com.airbnb.android:lottie:2.7.0'
     compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
     compile 'com.android.support:cardview-v7:27.0.0'
+    compile 'com.github.hackware1993:MagicIndicator:1.5.0'
 }
 repositories {
     mavenCentral()

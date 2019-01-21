@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -68,22 +69,23 @@ public class CustomRefreshHeader extends LinearLayout implements RefreshHeader {
 
     @Override
     public void onPulling(float percent, int offset, int height, int extendHeight) {
-
+        Log.d("mytag","----onPulling...");
     }
 
     @Override
     public void onReleasing(float percent, int offset, int height, int extendHeight) {
-
+        Log.d("mytag","----onReleasing...");
     }
 
     @Override
     public void onReleased(RefreshLayout refreshLayout, int height, int extendHeight) {
-
+        Log.d("mytag","----onReleased...");
     }
 
     @Override
     public void onStartAnimator(@NonNull RefreshLayout refreshLayout, int height, int extendHeight) {
         lottieAnimationView.playAnimation();
+        Log.d("mytag","----onStartAnimator...");
     }
 
     @Override
@@ -121,8 +123,9 @@ public class CustomRefreshHeader extends LinearLayout implements RefreshHeader {
                 arrow.animate().rotation(180);
                 break;
             case Refreshing:
-                tipView.setText("正在刷新");
+                tipView.setText("正在刷新...");
                 arrow.setVisibility(GONE);
+                Log.d("mytag","----正在刷新...");
                 break;
 
         }

@@ -261,6 +261,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/doS" />
+
         <Button
             android:id="@+id/doU"
             android:layout_width="wrap_content"
@@ -273,6 +274,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/doT" />
+
         <Button
             android:id="@+id/doV"
             android:layout_width="wrap_content"
@@ -285,6 +287,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/doU" />
+
         <Button
             android:id="@+id/doW"
             android:layout_width="wrap_content"
@@ -297,6 +300,19 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/doV" />
+
+        <Button
+            android:id="@+id/doX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginLeft="8dp"
+            android:text="SecondaryScreenTest"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/doW" />
 
         <ImageView
             android:id="@+id/imageResult"

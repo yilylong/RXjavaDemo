@@ -206,6 +206,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button doX = (Button) findViewById(R.id.doX);
+        doX.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,SecondaryScreenTest.class);
+                startActivity(intent);
+            }
+        });
 
         EventBus.getDefault().register(this);
     }
