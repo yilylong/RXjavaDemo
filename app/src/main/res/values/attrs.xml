@@ -22,4 +22,8 @@
             <enum name="mode_image_hidden" value="1" />
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="SecondaryScreenView">
+        <attr name="rate" format="reference|float"></attr>
+    </declare-styleable>
 </resources>

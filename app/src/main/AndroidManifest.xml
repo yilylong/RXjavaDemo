@@ -58,7 +58,9 @@
         <activity android:name=".activity.CustomProgressBarActivity" />
         <activity android:name=".activity.EventBusTest" />
         <activity android:name=".activity.CustomRefreshHeaderActivity" />
-        <activity android:name=".activity.SecondaryScreenTest"></activity>
+        <activity android:name=".activity.SecondaryScreenTest"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            ></activity>
     </application>
 
 </manifest>

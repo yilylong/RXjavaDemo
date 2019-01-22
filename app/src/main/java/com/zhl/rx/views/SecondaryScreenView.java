@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Rect;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
@@ -13,17 +14,19 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.view.animation.LinearInterpolator;
 
+import com.zhl.rx.R;
+
 import java.util.ArrayList;
 
 /**
- * 描述：
+ * 描述：左滑负一屏的viewgroup
  * Created by zhaohl on 2019-1-18.
  */
 public class SecondaryScreenView extends ViewGroup {
     private View secondaryView;
     private View mainView;
     private int downX, downY,endX;
-    private float rate = 0.5f;
+    private float rate = 0.65f;
     private boolean isScrollerRight = true;
     private ArrayList<ViewPager> viewPagers = new ArrayList<>();
     private float touchSlop;
@@ -38,6 +41,8 @@ public class SecondaryScreenView extends ViewGroup {
 
     public SecondaryScreenView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.SecondaryScreenView);
+        rate = array.getFloat(R.styleable.SecondaryScreenView_rate,rate);
         touchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
     }
 
