@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.zhl.rx.R;
 import com.zhl.rx.adapter.MyPaperAdapter;
+import com.zhl.rx.views.SecondaryScreenView;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
 import net.lucode.hackware.magicindicator.ViewPagerHelper;
@@ -25,7 +27,7 @@ public class SecondaryScreenTest extends AppCompatActivity {
     private MagicIndicator magicIndicator;
     private ViewPager mViewPager;
     private ArrayList<String> mTitleDataList = new ArrayList<>();
-
+    SecondaryScreenView secondaryScreenView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +37,7 @@ public class SecondaryScreenTest extends AppCompatActivity {
         mTitleDataList.add("音乐");
         mTitleDataList.add("动画");
         magicIndicator = (MagicIndicator) findViewById(R.id.magic_indicator);
+        secondaryScreenView = findViewById(R.id.secondaryScreenView);
         mViewPager = findViewById(R.id.viewpager);
         mViewPager.setAdapter(new MyPaperAdapter(getSupportFragmentManager(),mTitleDataList));
         CommonNavigator commonNavigator = new CommonNavigator(this);
@@ -69,5 +72,28 @@ public class SecondaryScreenTest extends AppCompatActivity {
         });
         magicIndicator.setNavigator(commonNavigator);
         ViewPagerHelper.bind(magicIndicator, mViewPager);
+        ImageView btnSearch = findViewById(R.id.top_search);
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                secondaryScreenView.translateToSecondaryView();
+            }
+        });
+//        TextView desc = findViewById(R.id.desc);
+//        desc.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                secondaryScreenView.translateToMainView();
+//            }
+//        });
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(!secondaryScreenView.isStillMainView()){
+            secondaryScreenView.translateToMainView();
+        }else{
+            super.onBackPressed();
+        }
     }
 }

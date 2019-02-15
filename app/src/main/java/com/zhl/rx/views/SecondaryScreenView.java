@@ -224,6 +224,22 @@ public class SecondaryScreenView extends ViewGroup {
         return true;
     }
 
+    public void translateToSecondaryView(){
+        endX = secondaryView.getWidth();
+        isScrollerRight = true;
+        startTranslateAnim();
+    }
+
+    public void translateToMainView(){
+        endX = mainView.getWidth() * 1 / 3;
+        isScrollerRight = false;
+        startTranslateAnim();
+    }
+
+    public boolean isStillMainView(){
+        return endX ==0&&mainView.getTranslationX()==0;
+    }
+
     private void startTranslateAnim() {
         float secondTranslationX = 0;
         float mainTranslationX = 0;
