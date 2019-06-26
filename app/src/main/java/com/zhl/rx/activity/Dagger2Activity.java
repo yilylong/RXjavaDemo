@@ -7,10 +7,10 @@ import android.widget.TextView;
 import com.zhl.rx.R;
 import com.zhl.rx.bean.ShangjiaAModule;
 import com.zhl.rx.bean.ZhaiNan;
-import com.zhl.rx.entry.Computer;
+import com.zhl.rx.annotation.Computer;
 import com.zhl.rx.entry.DaggerActivityComponent;
 import com.zhl.rx.entry.DaggerPlatform;
-import com.zhl.rx.entry.Phone;
+import com.zhl.rx.annotation.Phone;
 
 import javax.inject.Inject;
 

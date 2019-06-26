@@ -2,11 +2,14 @@ package com.zhl.rx.activity
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.zhl.rx.R
 import com.zhl.rx.bean.Person
+import com.zhl.rx.entry.ExcellentStudent
+import com.zhl.rx.entry.Student
 
 /**
  * 描述：
@@ -50,6 +53,14 @@ class KotlinTest : AppCompatActivity() {
         btn.setOnClickListener({v-> Toast.makeText(this,"设置点击监听",0).show()})
         collectionTest();
         mapTest();
+        var stu = Student("lisi",13,"男性",155);
+        stu.read();
+        stu.speak("I speak chinese");
+        var excellent = ExcellentStudent(100);
+        excellent.read();
+        Log.d("mytag",excellent.name+"成绩="+excellent.score);
+        excellent.walk();
+
     }
 
     fun initArray(): String {

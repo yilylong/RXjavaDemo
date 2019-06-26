@@ -1,10 +1,10 @@
 package com.zhl.rx.activity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -36,7 +36,7 @@ import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
     Subscriber<Person> subscriber;
     TextView tst ;
     ImageView imageResult;
@@ -214,6 +214,20 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button doY = (Button) findViewById(R.id.doY);
+        doY.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                doY();
+            }
+        });
+        Button doZ = (Button) findViewById(R.id.doZ);
+        doZ.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                doZ();
+            }
+        });
 
         EventBus.getDefault().register(this);
     }
@@ -233,6 +247,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void doR() {
         Intent intent = new Intent(this,CoordinatorLayoutTest.class);
+        startActivity(intent);
+    }
+    private void doY() {
+        Intent intent = new Intent(this,FileDirTestActivity.class);
+        startActivity(intent);
+    }
+    private void doZ() {
+        Intent intent = new Intent(this,AliJavaTest.class);
         startActivity(intent);
     }
 

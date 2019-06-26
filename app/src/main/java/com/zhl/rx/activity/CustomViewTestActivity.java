@@ -1,12 +1,12 @@
 package com.zhl.rx.activity;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import com.zhl.rx.R;
 import com.zhl.rx.views.TagImageView;
 
-public class CustomViewTestActivity extends AppCompatActivity {
+public class CustomViewTestActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,7 +1,7 @@
 package com.zhl.rx.bean;
 
-import com.zhl.rx.entry.Computer;
-import com.zhl.rx.entry.Phone;
+import com.zhl.rx.annotation.Computer;
+import com.zhl.rx.annotation.Phone;
 
 import dagger.Module;
 import dagger.Provides;

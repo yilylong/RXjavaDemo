@@ -1,12 +1,14 @@
 package com.zhl.rx.bean;
 
+import com.zhl.rx.annotation.MyAnnotation;
+
 import java.io.Serializable;
 
 /**
  * 描述：
  * Created by zhaohl on 2018-1-5.
  */
-
+@MyAnnotation(ID = 11,name = "Movie")
 public class Movie implements Serializable {
     private String img;
     private int movieId;
